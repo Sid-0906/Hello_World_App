@@ -1,13 +1,16 @@
 public class HelloWorld {
     public static void main(String[] args) {
-        String name;
+
+        String greeting;
 
         if (args.length > 0) {
-            name = args[0];
+            // Join all names with comma and space
+            String names = String.join(", ", args);
+            greeting = "Hello, " + names + "!";
         } else {
-            name = "World";
+            greeting = "Hello, World!";
         }
 
-        System.out.println("Hello, " + name + "!");
+        System.out.println(greeting);
     }
 }
